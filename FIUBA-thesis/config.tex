@@ -42,6 +42,14 @@
 % The 'nottoc' option makes the Table of Contents itself not to be listed in the ToC.
 \usepackage[nottoc]{tocbibind}
 
+% Increase number-column width in LoF/LoT to avoid overfull boxes with multi-level numbering.
+%Your figure numbering like 1.1.1 was wider than the default number slot in LoF.
+%Widening that slot prevents line-3 overflow in FIUBA-thesis-main.lof.
+\makeatletter
+\renewcommand*\l@figure{\@dottedtocline{1}{1.5em}{3.2em}}
+\renewcommand*\l@table{\@dottedtocline{1}{1.5em}{3.2em}}
+\makeatother
+
 % ------------------------------------------------------------------------
 % PAGE MARGINS
 % ------------------------------------------------------------------------
@@ -59,7 +67,7 @@
 %\addtolength{\hoffset}{-2cm}
 %\addtolength{\textheight}{4cm}
 %\addtolength{\voffset}{2cm}
-%\setlength{\headheight}{14pt}
+\setlength{\headheight}{15.1pt}
 % ------------------------------------------------------------------------
 
 
@@ -75,7 +83,10 @@
 	% First you need to clear the default layout.
 	\fancyhead{}
 	\fancyfoot{}
-	\fancyhead[RE]{\rightmark}
+% -------------
+% Uncomment this line when using two-side mode document.
+% -------------
+	% \fancyhead[RE]{\rightmark}
 	\fancyhead[LO]{\rightmark}
 	\fancyfoot[C]{\thepage}
 	% Remove decorative lines.
@@ -325,10 +336,23 @@
 
 % The .bib file to be used
 \addbibresource{back-matter-bibliography.bib}
+% Add a bibliography-only line-breaking relaxation to avoid overflow caused by a long bibliography line.
+% \sloppy at bibliography start gives TeX more flexibility to break those long entries cleanly.
+\AtBeginBibliography{\sloppy}
 
 % ---------------------------------------------------
 % GLOSSARY / ACRONYMS
 % ---------------------------------------------------
+
+% --------------------------------
+% Spanish localization bug fix.
+% Glossaries pulls in datatool, and the TeX setup only has English datatool locale files installed. With babel set to spanish, tracklang warns that no Spanish datatool locale exists. Disabling datatool locale warnings suppresses this specific non-fatal warning cleanly.
+% Currently can’t install an official Spanish datatool locale, because TeX Live doesn’t ship one. datatool provides base locale files plus datatool-english and some region files, but no datatool-spanish file. The warning comes from datatool locale detection (via tracklang) when using babel with spanish.
+% Alternative solution: create a custom local Spanish datatool .ldf in the project so we can remove lang-warn=false.
+% Loading datatool-base with lang-warn=false disables Spanish locale warnings before glossaries triggers them.
+% Use this: \usepackage[lang-warn=false]{datatool-base}
+% Or this: \PassOptionsToPackage{lang-warn=false}{datatool-base}
+% --------------------------------
 % Required for the aligned glossary style
 \usepackage{longtable}
 % The 'acronym' option creates a dedicated list. The 'toc' option includes the glossary in the TOC.
