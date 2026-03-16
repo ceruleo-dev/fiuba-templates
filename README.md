@@ -126,7 +126,8 @@ Auxiliary files are moved to a `build/` subfolder to maintain a clean project di
 
 # 5 🚀 Getting started
 
-> [!danger] Perform the template compilation prior to writing the thesis/work to ensure the toolchain is correctly configured.
+> [!caution]
+> Perform the template compilation prior to writing the thesis/work to ensure the toolchain is correctly configured.
 
 * Get the code repository using one of the following methods.
 
@@ -154,11 +155,13 @@ LaTeX requires a specific sequence of operations to link text, cross-references,
 3. TeXstudio will compile the document and generate a `build` directory containing the PDF and auxiliary files.
 4. TeXStudio will open the generated PDF in the built-in viewer on the right side of the screen. Alternatively, open the PDF file in the `build` directory.
 
-> [!info] To recompile everything from scratch delete the generated `build` directory.
+> [!info]
+> To recompile everything from scratch delete the generated `build` directory.
 
 ## 5.2 📓Modifying the templates
 
-> [!danger] Use the following file naming convention
+> [!caution]
+> Use the following file naming convention
 > **FRONT-MATTER** Any file related to the front matter of the thesis shall be named as `front-matter-FILENAME.tex`. The front matter serves as a guide for the reader. It is numbered using Roman numerals, usually containing:
 > - **Title Page**: Contains the thesis title, author name, department, university, and date.
 > - **Abstract**: A concise summary of the research questions, methods, and findings.
@@ -177,7 +180,8 @@ LaTeX requires a specific sequence of operations to link text, cross-references,
 After confirming that the base template can be correctly compiled and visualized, modify it as needed.
 
 
-> [!warning] In what follows, we take the `Undergraduate Thesis` template as the primary example.
+> [!warning]
+> In what follows, we take the `Undergraduate Thesis` template as the primary example.
 
 1. Open the `FIUBA-thesis-main.tex` file.
 2. Complete the PDF settings requested information: ![](./attachments/image-13.png)
@@ -193,7 +197,8 @@ After confirming that the base template can be correctly compiled and visualized
 7. As your work evolves, add the corresponding acronyms in the file `front-matter-glossary.tex`.
 8. [*BibTex*](https://www.bibtex.org/) is used to manage the bibliographic references. Modify the provided `back-matter-bibliography.bib` file using the examples as references. Read more about BibTex syntax [here](https://www.bibtex.org/Format/).
 
-> [!tip] Draft watermark
+> [!tip]
+> Draft watermark
 > To maintain version control throughout the iterative review process with supervisors and the committee, it is advisable to apply a **watermark** to the manuscript. This practice ensures that preliminary drafts are clearly distinguished from the **definitive, press-ready** version, thereby mitigating potential confusion during subsequent **revisions**. For example:
 > ![](./attachments/image-2.png)
 > The templates have a *watermark* section in the `FIUBA-thesis-main.tex` file:
