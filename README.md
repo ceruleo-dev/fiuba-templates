@@ -180,7 +180,7 @@ LaTeX requires a specific sequence of operations to link text, cross-references,
 After confirming that the base template can be correctly compiled and visualized, modify it as needed.
 
 
-> [!warning]
+> [!note]
 > In what follows, we take the `Undergraduate Thesis` template as the primary example.
 
 1. Open the `FIUBA-thesis-main.tex` file.
@@ -198,7 +198,7 @@ After confirming that the base template can be correctly compiled and visualized
 8. [*BibTex*](https://www.bibtex.org/) is used to manage the bibliographic references. Modify the provided `back-matter-bibliography.bib` file using the examples as references. Read more about BibTex syntax [here](https://www.bibtex.org/Format/).
 
 > [!tip]
-> Draft watermark
+> **Draft watermark**
 > To maintain version control throughout the iterative review process with supervisors and the committee, it is advisable to apply a **watermark** to the manuscript. This practice ensures that preliminary drafts are clearly distinguished from the **definitive, press-ready** version, thereby mitigating potential confusion during subsequent **revisions**. For example:
 > ![](./attachments/image-2.png)
 > The templates have a *watermark* section in the `FIUBA-thesis-main.tex` file:
