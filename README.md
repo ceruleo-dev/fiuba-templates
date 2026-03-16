@@ -232,18 +232,17 @@ If you have templates such as `TikZ` diagrams, a better way to format tables, or
 
 ---
 
-# To-do list ^skipped
+# 📋 To-do list
 - [ ] Add a template for FIUBA courses reports.
 - [ ] Add a template for academic papers.
 
-# Authors ^skipped
+# 🫩 Authors
 
 * **[Santiago Husain Cerruti](https://github.com/ceruleo-dev)** - hola santiago at proton dot me
 
-# 📄 License ^skipped
+# 📄 License
 
-THIS WORK IS PROVIDED ON AN "AS IS" BASIS.  THE AUTHOR PROVIDES NO
-WARRANTY WHATSOEVER, EITHER EXPRESS OR IMPLIED, REGARDING THE WORK, INCLUDING WARRANTIES WITH RESPECT TO ITS MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE.
+THIS WORK IS PROVIDED ON AN "AS IS" BASIS.  THE AUTHOR PROVIDES NO WARRANTY WHATSOEVER, EITHER EXPRESS OR IMPLIED, REGARDING THE WORK, INCLUDING WARRANTIES WITH RESPECT TO ITS MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE.
 
 Copyright (c) 2026 Santiago Husain Cerruti.
 Distributed under the MIT License.
