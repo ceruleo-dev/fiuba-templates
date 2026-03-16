@@ -1,0 +1,51 @@
+%% -------------------------------------
+%%
+%% Appendix page example file.
+%%
+%% ---------------------
+%% Change log:
+%% 	2026-03-15 - initial version.
+%%
+%% ---------------------
+%% Authors:
+%% 	Santiago Husain Cerruti - hola dot santiago at proton dot me
+%%
+%% ---------------------
+%% Filename: back-matter-appendix-calculos-complementarios.tex
+%% Part of FIUBA-thesis project.
+%% Copyright (c) 2026 Santiago Husain Cerruti.
+%% Licensed under the MIT License.
+%% See LICENSE file for full text.
+% -------------------------------------
+\chapter{Cálculos complementarios}\label{appCalcMisc}
+
+\section{Rotaciones elementales}
+En el libro de \textcite{espana_book} se desarrollan las expresiones de rotaciones alrededor de los ejes de un sistema cartesiano, llamadas \emph{rotaciones elementales de Euler}. Si el ángulo a rotar es $\phi$, las expresiones de las matrices de rotación son las siguientes:
+
+\begin{IEEEeqnarray}{rCl}
+\mathbf{R}_x\left(\phi\right) & = &
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & \cos \left(\phi\right) & \sin \left(\phi\right) \\
+0 & -\sin \left(\phi\right) & \cos \left(\phi\right) \\
+\end{bmatrix}
+\end{IEEEeqnarray}
+
+\begin{IEEEeqnarray}{rCl}
+\mathbf{R}_y\left(\phi\right) & = &
+\begin{bmatrix}
+\cos \left(\phi\right) & 0 & -\sin \left(\phi\right) \\
+0 & 1 & 0 \\
+\sin \left(\phi\right) & 0 & \cos \left(\phi\right)\\
+\end{bmatrix}
+\end{IEEEeqnarray}
+
+\begin{IEEEeqnarray}{rCl}
+\mathbf{R}_z\left(\phi\right) & = &
+	\begin{bmatrix}
+	\cos \left(\phi\right) & \sin \left(\phi\right) & 0 \\
+	-\sin \left(\phi\right) & \cos \left(\phi\right) & 0 \\
+	0 & 0 & 1
+	\end{bmatrix}
+\end{IEEEeqnarray}
+

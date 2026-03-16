@@ -1,0 +1,80 @@
+%% -------------------------------------
+%%
+%% Graduate thesis cover page file.
+%%
+%% ---------------------
+%% Change log:
+%% 	2026-03-15 - initial version.
+%%
+%% ---------------------
+%% Authors:
+%% 	Santiago Husain Cerruti - hola dot santiago at proton dot me
+%%
+%% ---------------------
+%% Filename: front-matter-cover-graduate-thesis.tex
+%% Part of FIUBA-thesis project.
+%% Copyright (c) 2026 Santiago Husain Cerruti.
+%% Licensed under the MIT License.
+%% See LICENSE file for full text.
+% -------------------------------------
+\AddToShipoutPictureBG*{%
+	\includegraphics[width=\paperwidth,height=\paperheight]{media/front-matter-cover/02-FIUBA-graduate-thesis-cover-background.png}%
+}
+
+\begin{titlepage}
+	\thispagestyle{empty}
+	% 1. VERTICAL PUSH
+	\vspace*{-4cm}
+	% ---------------------
+	% 1. HORIZONTAL PUSH
+	% Add space to the left to shove the minipage to the right.
+	% Adjust this value (e.g., 2cm, 4cm) to move it as far right as you want.
+	\noindent\hspace*{2.5cm}%
+	\begin{minipage}[t][0.9\textheight][t]{0.8\textwidth}
+		\raggedleft % Re-applied Right Alignment
+		
+		% 1. TITLE (Grows UPWARDS from 445.5bp)
+		\vspace*{445.5bp}%
+		\begin{minipage}[b][0pt][b]{\linewidth}%
+			\raggedleft
+			{\fontsize{33}{40}\selectfont\textbf{[(Título del trabajo)]}\par}%
+			% Comment the following line if there is no sub-title.
+			{\fontsize{23}{40}\selectfont\textbf{[(Sub-título)]}\par}%
+		\end{minipage}
+		
+		% 2. AUTHORS
+		\vspace{36.5bp}%
+		{\fontsize{20}{24}\selectfont [(Nombre del Autor)]\par}
+		
+		% 3. DEGREE NAME
+		\vspace{20bp}% 
+		{\fontsize{15}{18}\selectfont [(Tesis/Trabajo Final) de la (Carrera de Especialización)/(Maestría) en (especialidad)]\par}
+		
+		% 4. DIRECTOR
+		\vspace{23.3bp}%
+		{\fontsize{11}{13}\selectfont Director:\par}
+		{\fontsize{11}{13}\selectfont [(Nombre del Director) (afiliación)]\par}
+		% Comment the following two lines if there is no co-director.
+		{\fontsize{11}{13}\selectfont Co-director:\par}
+		{\fontsize{11}{13}\selectfont [(Nombre del Co-Director) (afiliación)]\par}
+		
+		% 5. COMMITTEE
+		\vspace{36.5bp}%
+		{\fontsize{11}{13}\selectfont Jurados:\par}
+		{\fontsize{11}{13}\selectfont [(Nombre de Jurado 1) (afiliación)]\par}
+		{\fontsize{11}{13}\selectfont [(Nombre de Jurado 2) (afiliación)]\par}
+		{\fontsize{11}{13}\selectfont [(Nombre de Jurado 3) (afiliación)]\par}
+		{\fontsize{11}{13}\selectfont [(Nombre de Jurado 4) (afiliación)]\par}
+		
+		% 6. DATE AND PLACE
+		\vspace{21.1bp}%
+		{\fontsize{10}{12}\selectfont\textit{[Este trabajo fue realizado en (LUGAR), (DD) de (MES) de (AÑO).]}\par}
+	\end{minipage}%
+	% 2. HORIZONTAL PULL: Apply the EXACT SAME negative space to the right.
+	% This tricks LaTeX's centering mechanism into thinking the block hasn't moved.
+	\hspace*{-2.5cm}
+	% ---------------------
+	% 2. VERTICAL PULL: Apply the exact opposite space at the bottom.
+	% Since we added 2cm at the top, we subtract 2cm here.
+	\vspace*{4cm}
+\end{titlepage}

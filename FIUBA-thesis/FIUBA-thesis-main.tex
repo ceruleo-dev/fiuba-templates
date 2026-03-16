@@ -1,0 +1,165 @@
+%% -------------------------------------
+%%
+%% LaTex template for academic writings of the Faculty of Engineering of the University of Buenos Aires.
+%% Can be used for:
+%% 	- Capstone Project (TP Profesional) / Undergraduate Thesis 
+%%	- Graduate Thesis
+%%	- PhD Dissertation
+%%
+%% Based on the mitthesis class.
+%% 
+%% ---------------------
+%% References:
+%% - Covers: https://fi.uba.ar/institucional/secretarias/secretaria-de-coordinacion-general/direccion-de-comunicacion-institucional/caratulas-de-tesis
+%% - MIT Thesis class: https://web.mit.edu/thesis/tex/ - https://ctan.org/pkg/mitthesis
+%%
+%% ---------------------
+%% Change log:
+%% 	2026-03-15 - initial version.
+%%
+%% ---------------------
+%% Authors:
+%% 	Santiago Husain Cerruti - hola dot santiago at proton dot me
+%%
+%% ---------------------
+%% Filename: FIUBA-thesis-main.tex
+%% Part of FIUBA-thesis project.
+%% Copyright (c) 2026 Santiago Husain Cerruti.
+%% Licensed under the MIT License.
+%% See LICENSE file for full text.
+%%
+%% THIS WORK IS PROVIDED ON AN "AS IS" BASIS.  THE AUTHOR PROVIDES NO
+%% WARRANTY WHATSOEVER, EITHER EXPRESS OR IMPLIED, REGARDING THE WORK,
+%% INCLUDING WARRANTIES WITH RESPECT TO ITS MERCHANTABILITY OR FITNESS
+%% FOR ANY PARTICULAR PURPOSE.
+% -------------------------------------
+\documentclass[12pt,singlespace,a4paper]{mitthesis}
+
+% ---------------------------------------------------
+% CONFIGURATION FILE
+% Everything related to this template configuration shall be 
+% handled in this file.
+% ---------------------------------------------------
+\input{config.tex}
+
+% ---------------------------------------------------
+% WATERMARK
+% Useful to produce drafts before publishing.
+% ---------------------------------------------------
+\usepackage{draftwatermark}
+\SetWatermarkLightness{0.9}
+\SetWatermarkScale{0.8}
+\SetWatermarkText{BORRADOR}
+
+% ---------------------------------------------------
+% HYPERTEXT.
+% WARNING: must always be the last loaded package.
+% ---------------------------------------------------
+% Package for using hypertext. All links, references, etc., become hypertext.
+\usepackage[pdftex,breaklinks]{hyperref}
+\hypersetup{
+	pdfdisplaydoctitle=true,
+	colorlinks=true,
+	urlcolor = blue,		
+	pdfnewwindow=true,
+	linkcolor=blue,
+	citecolor=blue,
+	filecolor=blue,
+	linktocpage=true,
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% FILL IN WITH YOUR INFORMATION
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	pdftitle={PDF TITLE},
+	pdfauthor={PDF AUTHOR}
+}
+
+\begin{document}
+\sisetup{range-phrase=--}
+\sisetup{range-units = single}
+% I'm removing the extra space added between paragraphs.
+\raggedbottom
+% The first pages are numbered in Roman numerals, followed by Arabic numerals.
+\pagenumbering{roman}
+% ---------------------------------------------------
+% COVER PAGE
+% Comment the two that do not apply to the current degree.
+% ---------------------------------------------------
+\include{front-matter-cover-undergraduate-thesis.tex}
+%\include{front-matter-cover-graduate-thesis.tex}
+%\include{front-matter-cover-phd-dissertation.tex}
+
+% ---------------------------------------------------
+% SIGNATURES PAGE
+% Some departments require an additional cover page
+% with signatures of the thesis committee.  Please check with your
+% thesis advisor or other appropriate person to determine if such a 
+% page is required for your thesis.
+% ---------------------------------------------------
+\include{front-matter-signature.tex}
+
+% ---------------------------------------------------
+% ABSTRACT PAGE
+% A concise summary of the research problem, methodology, and key findings.
+% ---------------------------------------------------
+\begin{abstractpage}
+\input{front-matter-abstract.tex}
+\end{abstractpage}
+
+% ---------------------------------------------------
+% ACKNOWLEDMENTS PAGE
+% A space to thank those who supported your research journey.
+% ---------------------------------------------------
+\include{front-matter-acknowledgements.tex}
+
+% ---------------------------------------------------
+% EPIGRAPH PAGE
+% A short personal note or a relevant quotation that sets the tone for the work.
+% ---------------------------------------------------
+\include{front-matter-epigraph.tex}
+
+% ---------------------------------------------------
+% CONTENTS
+\tableofcontents
+\cleardoublepage
+
+\listoffigures
+\cleardoublepage
+
+\listoftables
+\cleardoublepage
+
+% Print the glossary first! It handles its own page breaks.
+\printnoidxglossary[type=\acronymtype, title={Lista de Acrónimos}]
+\glsaddall
+\cleardoublepage
+
+% ---------------------------------------------------
+% CHAPTERS
+% ---------------------------------------------------
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\include{main-body-chapter-intro.tex}
+\include{main-body-chapter-results.tex}
+\include{main-body-conclusions.tex}
+% ---------------------------------------------------
+% APPENDICES
+% ---------------------------------------------------
+\appendix
+\include{back-matter-appendix-calculos-complementarios.tex}
+\include{back-matter-appendix-nutation-theory-coefficients.tex}
+
+% ---------------------------------------------------
+% BIBLIGRAPHY
+% ---------------------------------------------------
+% This command prints all the bibliographic entries, even if they were not cited in the text.
+\nocite{*}
+\clearpage
+% Add the Bibliography to the Table of Contents and print it.
+\printbibliography[heading=bibintoc,title={Referencias}]
+
+% ---------------------------------------------------
+% AUTHORSHIP DECLARATION
+% ---------------------------------------------------
+\include{back-matter-authorship-declaration.tex}
+\end{document}
+
