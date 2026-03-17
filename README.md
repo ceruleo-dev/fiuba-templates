@@ -89,7 +89,9 @@ Install [MacTeX](https://www.tug.org/mactex/) for macOS environments.
 
 ### 4.1.4 Online editing 
 
-These templates are compatible with [Overleaf](https://www.overleaf.com/) or [Prism](https://prism.openai.com/). Upload the respective folders to the platform for online editing.
+These templates are compatible with [Overleaf](https://www.overleaf.com/) or [Prism](https://prism.openai.com/).
+
+* Upload the `FIUBA-thesis` folder of this repository to the platform for online editing.
 
 ## 4.2 Editor installation (TeXstudio)
 
@@ -181,12 +183,12 @@ After confirming that the base template can be correctly compiled and visualized
 
 
 > [!note]
-> In what follows, we take the `Undergraduate Thesis` template as the primary example.
+> In what follows, we take the `Graduate Thesis` template as the primary example.
 
 1. Open the `FIUBA-thesis-main.tex` file.
 2. Complete the PDF settings requested information: ![](./attachments/image-13.png)
-3. Select the type of thesis cover to use by commenting the two lines that do not correspond to the type of cover. In this case comment the *graduate* and *PhD* lines: ![](./attachments/image-1.png)
-4. Open the `front-matter-cover-undergraduate-thesis.tex` file and complete the cover requested information. Delete the lines that do not correspond (e.g. maybe there is no co-director): ![](./attachments/image-14.png)
+3. Select the type of thesis cover to use by commenting the two lines that do not correspond to the type of cover. In this case comment the *undergraduate* and *PhD* lines: ![](./attachments/image-1.png)
+4. Open the `front-matter-cover-graduate-thesis.tex` file and complete the cover requested information. Delete the lines that do not correspond (e.g. maybe there is no co-director): ![](./attachments/image-14.png)
 5. Do the same as the previous step for the following files:
 	- `front-matter-signature.tex`
 	- `front-matter-abstract.tex`

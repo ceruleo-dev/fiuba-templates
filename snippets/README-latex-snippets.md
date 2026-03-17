@@ -2,20 +2,23 @@ Assortment of LaTex code snippets.
 
 # 1. TEXT SNIPPETS.
 
-> [!example] A standard quote
+> [!tip]
+> **A standard quote**
 > ```latex
 > \enquote{This is a quote.}
 > ```
 > ![](attachments/image-1.png)
 
-> [!example] A nested quote
+> [!tip]
+> **A nested quote**
 > Note that `csquotes` package handles the single quotes automatically.
 > ```latex
 > \enquote{The witness stated, \enquote{I saw nothing} during the trial.}
 > ```
 > ![](attachments/image.png)
 
-> [!example] Acronyms definitions.
+> [!tip]
+> **Acronyms definitions.**
 > * In the `\misc\glossary.tex` file, define acronyms using the `\newacronym` command.
 > * Usage: `\newacronym[acronym_reference]{acronym}{description}`, where `acronym_reference` will be used to reference the acronym in the document.
 > * Definition (in `\misc\glossary.tex`):
@@ -33,7 +36,8 @@ Assortment of LaTex code snippets.
 > ```
 > ![](attachments/image-3.png)
 
-> [!example] How add bibliographic references and cite them
+> [!tip]
+> **How add bibliographic references and cite them**
 > 1. Add the bibliographic entry in the `bibliography/main.bib` file. Note that the provided templates already have many examples of books, articles, etc. as example. Delete them and add yours. For example:
 > ```latex
 > @article{paper_servidia2021,
@@ -64,8 +68,9 @@ Assortment of LaTex code snippets.
 * The images must be inside the `includes` directory. E.g. `includes/Logo_UBA` or `includes/EPS_FIGURE`.
 * It is highly recommended to use vectorized EPS images to avoid losing image quality.
 * If I include figures from MatLab, they shouldn't be saved in maximized (full screen size) mode.
-* 
-> [!example] Basic figure inclusion
+
+> [!tip]
+> **Basic figure inclusion**
 > ```latex
 > \begin{figure}[!ht]
 > 	\centering
@@ -76,7 +81,8 @@ Assortment of LaTex code snippets.
 > ```
 > ![](attachments/image-5.png)
 
-> [!example] Side-by-side figures
+> [!tip]
+> **Side-by-side figures**
 > ```latex
 > \begin{figure}[H]
 > 	\centering
@@ -90,7 +96,8 @@ Assortment of LaTex code snippets.
 > ```
 > ![](attachments/image-6.png)
 
-> [!example] A good looking table
+> [!tip]
+> **A good looking table**
 > ```latex
 > \begin{table}
 > 	\caption{Good looking table using booktabs}
@@ -98,21 +105,21 @@ Assortment of LaTex code snippets.
 > 	\label{table:good_table}
 > 	\begin{tabular}{l c c c c}
 > 		\toprule
-> 		\multirow{2}{*}{Dental measurement} & \multicolumn{2}{c}{Species I} & \multicolumn{2}{c}{Species II} \\ 
+> 		\multirow{2}{*}{Dental measurement} & \multicolumn{2}{c}{Species I} & \multicolumn{2}{c}{Species II} \\
 > 		\cmidrule{2-5}
-> 		& mean & SD  & mean & SD  \\ 
+> 		& mean & SD  & mean & SD  \\
 > 		\midrule
 > 		I1MD & 6.23 & 0.91 & 5.2  & 0.7  \\
-> 		
+>
 > 		I1LL & 7.48 & 0.56 & 8.7  & 0.71 \\
-> 		
+>
 > 		I2MD & 3.99 & 0.63 & 4.22 & 0.54 \\
-> 		
+>
 > 		I2LL & 6.81 & 0.02 & 6.66 & 0.01 \\
-> 		
+>
 > 		CMD & 13.47 & 0.09 & 10.55 & 0.05 \\
-> 		
-> 		CBL & 11.88 & 0.05 & 13.11 & 0.04\\ 
+>
+> 		CBL & 11.88 & 0.05 & 13.11 & 0.04\\
 > 		\bottomrule
 > 	\end{tabular}
 > \end{table}
@@ -124,7 +131,8 @@ Assortment of LaTex code snippets.
 * Use the one you like.
 * `IEEEeqnarray` environment is recommended.
 
-> [!example] Related equations
+> [!tip]
+> **Related equations**
 > ```latex
 > \begin{IEEEeqnarray}{rCl}
 > 	\IEEEyesnumber\label{ec_ex1_relaciones} \IEEEyessubnumber*
@@ -135,13 +143,15 @@ Assortment of LaTex code snippets.
 > ```
 > ![](./attachments/image-8.png)
 
-> [!example] How to reference the equations of the previous snippet
+> [!tip]
+> **How to reference the equations of the previous snippet**
 > ```latex
 > ...where the set of equations \eqref{ec_ex1_x}, \eqref{ec_ex1_y} and \eqref{ec_ex1_downsampling} is referred to as \eqref{ec_ex1_relaciones}.
 > ```
 > ![](./attachments/image-9.png)
 
-> [!example] Using `align` environment
+> [!tip]
+> **Using `align` environment**
 > ```latex
 > \begin{align}
 > 	N_{x,sk} &= k_{sk}\left(\frac{t_{sk}}{b_{sk}}\right)^{2}\bar{Et}\nonumber\\
@@ -150,7 +160,8 @@ Assortment of LaTex code snippets.
 > ```
 > ![](./attachments/image-10.png)
 
-> [!example] Aligned equations using `IEEEeqnarray` style
+> [!tip]
+> **Aligned equations using `IEEEeqnarray` style**
 > ```latex
 > \begin{IEEEeqnarray}{CCC}
 > 	\IEEEyesnumber\label{eq:both} \IEEEyessubnumber*
@@ -160,7 +171,8 @@ Assortment of LaTex code snippets.
 > ```
 > ![](./attachments/image-11.png)
 
-> [!example] `IEEEeqnarray` with matrices
+> [!tip]
+> **`IEEEeqnarray` with matrices**
 > ```latex
 > \begin{IEEEeqnarray}{rCl}
 > 	a = \left[
@@ -177,7 +189,8 @@ Assortment of LaTex code snippets.
 > ```
 > ![](./attachments/image-12.png)
 
-> [!example] `equation` environment
+> [!tip]
+> **`equation` environment**
 > ```latex
 > \begin{equation}
 > 	\begin{cases}
@@ -189,10 +202,11 @@ Assortment of LaTex code snippets.
 > ```
 > ![](./attachments/image-13.png)
 
-> [!example] `equation` environment using matrices
+> [!tip]
+> **`equation` environment using matrices**
 > ```latex
 > \begin{equation}
-> 	\mathbf{R}_x\left(\phi\right) = 
+> 	\mathbf{R}_x\left(\phi\right) =
 > 	\begin{bmatrix}
 > 		1 & 0 & 0 \\
 > 		0 & \cos \left(\phi\right) & \sin \left(\phi\right) \\
@@ -202,7 +216,8 @@ Assortment of LaTex code snippets.
 > ```
 > ![](./attachments/image-14.png)
 
-> [!example] Differentials and derivatives
+> [!tip]
+> **Differentials and derivatives**
 > * Differentials
 > ```latex
 > $\odif{x}$
@@ -222,9 +237,10 @@ Assortment of LaTex code snippets.
 > ```
 > ![](./attachments/image-15.png)
 
-> [!example] Higher-Order Mixed Partial Derivatives
+> [!tip]
+> **Higher-Order Mixed Partial Derivatives**
 > If you need multiple derivatives of the same variable (e.g., differentiating twice with respect to $x$ and three times with respect to $y$), you use the optional `order={...}` argument. You pass it a comma-separated list of the powers that corresponds to your variables.
-> 
+>
 > * Differentiate twice by x, and three times by y
 > ```latex
 > $ \pdv[order={2,3}]{f}{x,y} $
@@ -235,7 +251,8 @@ Assortment of LaTex code snippets.
 > ```
 > ![](./attachments/image-16.png)
 
-> [!example] Derivatives Lower/Upper Evaluation Limits
+> [!tip]
+> **Derivatives Lower/Upper Evaluation Limits**
 > To evaluate a derivative at a single point, just add a subscript to the very end of the `\odv` command:
 > ```latex
 > $\odv{f}{x}_{x=0}$
@@ -248,10 +265,11 @@ Assortment of LaTex code snippets.
 > ![](./attachments/image-18.png)
 > * **Note:** If you ever write compact, inline derivatives using the starred version of the command (e.g., `$\odv*{f}{x}_{x=0}$`), the package is smart enough to scale the vertical evaluation bar down automatically to match the inline fraction style.
 
-> [!example] Integrals
+> [!tip]
+> **Integrals**
 > Basic usage:
-> ```latex 
-> \int x^2 \odif{x} 
+> ```latex
+> \int x^2 \odif{x}
 > ```
 > Multi-line limits: Stack the conditions on top of each other using the `\substack{...}` command provided by `amsmath` package. You use standard line breaks `\\` inside the stack.
 > ```latex
@@ -259,7 +277,8 @@ Assortment of LaTex code snippets.
 > ```
 > ![](./attachments/image-19.png)
 
-> [!example] Absolute value and norm operators
+> [!tip]
+> **Absolute value and norm operators**
 > Standard Size (no star `*`): Use this for regular, inline variables or basic equations. It keeps the brackets the same height as standard text, which prevents awkward line-spacing issues in your paragraphs.
 > ```latex
 > The absolute value of $x$ is $\abs{x}$, and the norm of the vector is $\norm{v}$.
@@ -284,41 +303,44 @@ Assortment of LaTex code snippets.
 > ```
 > ![](./attachments/image-21.png)
 
-> [!example] Set Builder Notation command 
+> [!tip]
+> **Set Builder Notation command**
 > Instead of typing the curly braces and the \mid manually, you just wrap everything in the \set command and use \given wherever you want the vertical separator. It inherits all the exact same scaling tricks (starred, standard, and manual) that \abs and \norm have.
 > Standard Size
 > ```latex
-> \set{ x \given x > 0 } 
+> \set{ x \given x > 0 }
 > ```
 > Auto-scaling (Starred) with a tall fraction
 > ```latex
-> \set*{ x \in \mathbb{R} \given \frac{x^2}{2} > 5 } 
+> \set*{ x \in \mathbb{R} \given \frac{x^2}{2} > 5 }
 > ```
 > ![](./attachments/image-31.png)
 
-> [!example] Automatic Scaling Brackets
+> [!tip]
+> **Automatic Scaling Brackets**
 > When you write equations with tall elements like fractions or matrices, standard parentheses ( and ) stay small and look awkward. While typing \left( and \right) fixes this, doing it every single time gets exhausting and clutters your code.
 > Whenever you use these commands with a star (`*`), LaTeX will automatically apply `\left` and `\right` to scale them perfectly to whatever is inside. If you use them without a star, they stay standard size.
 > The old, ugly way (small brackets around a tall fraction)
 > ```latex
->  ( \frac{1}{2} ) 
+>  ( \frac{1}{2} )
 > ```
 > The old, tedious way
 > ```latex
->  \left( \frac{1}{2} \right) 
+>  \left( \frac{1}{2} \right)
 > ```
 > The fast, modern way with auto-scaling
 > ```latex
->  \paren*{\frac{1}{2}} 
+>  \paren*{\frac{1}{2}}
 > ```
 > Works seamlessly with tall matrices too
 > ```latex
->  \sqbrac*{ \begin{matrix} 1 & 2 \\ 3 & 4 \end{matrix} } 
->  \abs*{\frac{x^2 - 1}{x + 1}} 
+>  \sqbrac*{ \begin{matrix} 1 & 2 \\ 3 & 4 \end{matrix} }
+>  \abs*{\frac{x^2 - 1}{x + 1}}
 >  ```
 >  ![](./attachments/image-29.png)
 
-> [!example] Automatic matrix transposition.
+> [!tip]
+> **Automatic matrix transposition.**
 > Original matrix
 > ```latex
 > \begin{bmatrix}
@@ -326,7 +348,7 @@ Assortment of LaTex code snippets.
 > 	4 & 5 & 6
 > \end{bmatrix}
 > ```
-> 
+>
 > Transposed matrix
 > ```latex
 > \begin{bmatrixT}
@@ -334,7 +356,7 @@ Assortment of LaTex code snippets.
 > 	4 & 5 & 6
 > \end{bmatrixT}
 > ```
-> 
+>
 > Transpose with parentheses
 > ```latex
 > \begin{pmatrixT}
@@ -342,7 +364,7 @@ Assortment of LaTex code snippets.
 > 	c & d
 > \end{pmatrixT}
 > ```
-> 
+>
 > Transpose with vertical determinant bars
 > ```latex
 > \begin{vmatrixT}
@@ -352,7 +374,8 @@ Assortment of LaTex code snippets.
 > ```
 > ![](./attachments/image-33.png)
 
-> [!example] Commands to typeset boldface vectors and matrices.
+> [!tip]
+> **Commands to typeset boldface vectors and matrices.**
 > ```latex
 > \vecbf{v}
 > \mVec{v}
@@ -360,7 +383,8 @@ Assortment of LaTex code snippets.
 > ```
 > ![](./attachments/image-22.png)
 
-> [!example] Commands to typeset quaternions and its basic operations (composition, conjugation, rotation).
+> [!tip]
+> **Commands to typeset quaternions and its basic operations**
 > ```latex
 > \quat{q}
 > \quatComp{a}{b}
@@ -369,7 +393,8 @@ Assortment of LaTex code snippets.
 > ```
 > ![](./attachments/image-23.png)
 
-> [!example] Typeset vectors that have a 'hat' element.
+> [!tip]
+> **Typeset vectors that have a 'hat' element.**
 > Vector estimate.
 > ```latex
 > \vechat{a}
@@ -384,7 +409,8 @@ Assortment of LaTex code snippets.
 > ```
 > ![](./attachments/image-24.png)
 
-> [!example] Misc examples of useful equations typesetting.
+> [!tip]
+> **Misc examples of useful equations typesetting.**
 > Vector product.
 > ```latex
 > \vecprod{a}{b}
@@ -403,26 +429,30 @@ Assortment of LaTex code snippets.
 > ```
 > ![](./attachments/image-25.png)
 
-> [!example] Imaginary unit.
+> [!tip]
+> **Imaginary unit.**
 > ```latex
 > \iu
 > ```
 > ![](./attachments/image-26.png)
 
-> [!example] Mathematical object definition.
+> [!tip]
+> **Mathematical object definition.**
 > ```latex
 > \defineEq
 > ```
 > ![](./attachments/image-30.png)
 
-> [!example] Typesetting angles.
+> [!tip]
+> **Typesetting angles.**
 > ```latex
 > \ang{45}
 > \ang{10; 20; 30}
 > ```
 > ![](./attachments/image-28.png)
 
-> [!example] Scientific numbering
+> [!tip]
+> **Scientific numbering**
 > ```latex
 > \ang{23.43929111}
 > \ang{;;46.8150}
@@ -439,7 +469,8 @@ Assortment of LaTex code snippets.
 ---
 # 4. SOURCE CODE SNIPPETS.
 
-> [!example] Pseudocode example
+> [!tip]
+> **Pseudocode example**
 > ```latex
 > \begin{algorithm}[!ht]
 > 	\caption{Pseudocódigo del algoritmo euclídeo extendido}\label{alg_euc_ex}
@@ -473,7 +504,8 @@ Assortment of LaTex code snippets.
 > ```
 > ![](./attachments/image-38.png)
 
-> [!example] C++ language snippet.
+> [!tip]
+> **C++ language snippet**
 > ```latex
 > \begin{lstlisting}[language=C++, style=StyleC, caption={Snippet}]
 > 	typedef boost::interprocess::deque<Command, allocator_t> deque_t;
@@ -484,7 +516,8 @@ Assortment of LaTex code snippets.
 > ```
 > ![](./attachments/image-36.png)
 
-> [!example] Linux terminal view
+> [!tip]
+> **Linux terminal view**
 > ```latex
 > \begin{lstlisting}[style=terminal, caption={Vista desde una terminal Linux.}]
 > 	$ g++ -Wall -pedantic main.cpp -o programa
