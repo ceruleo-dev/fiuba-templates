@@ -245,7 +245,7 @@ If you have templates such as `TikZ` diagrams, a better way to format tables, or
 
 # 🫩 Authors
 
-* **[Santiago Husain Cerruti](https://github.com/ceruleo-dev)** - hola santiago at proton dot me
+* **[Santiago Husain Cerruti](https://github.com/ceruleo-dev)** - hola santiago [at] proton [dot] me
 
 # 📄 License
 
