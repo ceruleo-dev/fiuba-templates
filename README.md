@@ -164,6 +164,7 @@ LaTeX requires a specific sequence of operations to link text, cross-references,
 
 > [!caution]
 > Use the following file naming convention
+> 
 > **FRONT-MATTER** Any file related to the front matter of the thesis shall be named as `front-matter-FILENAME.tex`. The front matter serves as a guide for the reader. It is numbered using Roman numerals, usually containing:
 > - **Title Page**: Contains the thesis title, author name, department, university, and date.
 > - **Abstract**: A concise summary of the research questions, methods, and findings.
@@ -201,6 +202,7 @@ After confirming that the base template can be correctly compiled and visualized
 
 > [!tip]
 > **Draft watermark**
+> 
 > To maintain version control throughout the iterative review process with supervisors and the committee, it is advisable to apply a **watermark** to the manuscript. This practice ensures that preliminary drafts are clearly distinguished from the **definitive, press-ready** version, thereby mitigating potential confusion during subsequent **revisions**. For example:
 > ![](./attachments/image-2.png)
 > The templates have a *watermark* section in the `FIUBA-thesis-main.tex` file:
@@ -245,7 +247,7 @@ If you have templates such as `TikZ` diagrams, a better way to format tables, or
 
 # 🫩 Authors
 
-* **[Santiago Husain Cerruti](https://github.com/ceruleo-dev)** - hola santiago at proton dot me
+* **[Santiago Husain Cerruti](https://github.com/ceruleo-dev)** - hola santiago [at] proton [dot] me
 
 # 📄 License
 
